@@ -54,7 +54,7 @@ function App() {
   return (
     <div className="App">
       <header className="">
-        <h1>Hello Yahoo Search Engine</h1>
+        
         <div style={{ display: "flex", justifyContent: "center" }}>
           <input
             placeholder="search"

@@ -10,13 +10,17 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = () => {
+    if (searchTerm.trim().length === 0) {
+      alert("please add search query");
+      return;
+    }
     setIsLoading(true);
     axios
       .get(
         `https://api.serpwow.com/live/search?api_key=5BE9A2B6F84E4F4D958FF6DA466AB6D0&engine=yahoo&q=${searchTerm}`
       )
       .then(function (response) {
-        setIsLoading(false)
+        setIsLoading(false);
         setShowTitle(response.data.organic_results);
         setData(response.data);
       });
@@ -42,7 +46,7 @@ function App() {
                   {" "}
                   {item.displayed_link}
                 </a>
-                <p style={{ marginTop: "12px", }}> {item.snippet}</p>
+                <p style={{ marginTop: "12px" }}> {item.snippet}</p>
               </div>
               <br />
             </div>
@@ -54,14 +58,19 @@ function App() {
   return (
     <div className="App">
       <header className="">
-        
         <div style={{ display: "flex", justifyContent: "center" }}>
           <input
-            placeholder="search"
-            style={{ width: "50%", height: "50px" }}
+            placeholder="Search"
+            style={{
+              paddingLeft: "12px",
+              paddingRight: "12px",
+              width: "50%",
+              height: "50px",
+            }}
             value={searchTerm}
+            required
             onChange={(e) => setSearchTerm(e.target.value)}
-          />         
+          />
           <buttton
             className="srch-btn"
             onClick={handleSubmit}

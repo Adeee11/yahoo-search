@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  margin-top:36px;
 }
 
 .App-logo {
@@ -72,5 +72,12 @@
 .srch-btn {
   padding: 1rem 5rem;
   background-color :  #296BEF;
-  color :White
+  color :White;
+  border: 3px solid #296BEF;
+  cursor: pointer;
+}
+.srch-btn:hover{
+  background-color: white;
+  border: 3px solid #296BEF;
+  color :#296BEF;
 }

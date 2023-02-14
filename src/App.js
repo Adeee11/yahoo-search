@@ -38,6 +38,7 @@ function App(props) {
 
   useEffect(() => {
     const searchQuery = params.get("search");
+    if (searchQuery === null) return;
     if (searchTerm !== searchQuery) setSearchTerm(searchQuery);
     setSearch(true);
   }, []);

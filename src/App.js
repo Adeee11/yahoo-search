@@ -100,7 +100,7 @@ function App(props) {
             onClick={handleSubmit}
             disabled={isLoading}
           >
-            Submit{" "}
+            Search{" "}
           </buttton>
         </form>
         {isLoading ? <LoadingSpinner /> : renderUser}

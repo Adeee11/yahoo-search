@@ -2,16 +2,16 @@
   margin-top:36px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.searchResult{
+  padding-left: 7rem;
+  padding-right:7rem;
+
+  
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -80,4 +80,15 @@
   background-color: white;
   border: 3px solid #296BEF;
   color :#296BEF;
+}
+
+@media (max-width:420px) {
+  .searchResult{
+    padding-left: 1rem;
+    padding-right:1rem;
+  }
+  .srch-btn{
+    padding: 1rem 3rem;
+  }
+  
 }

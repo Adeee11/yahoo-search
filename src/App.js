@@ -19,7 +19,7 @@ function App(props) {
     setIsLoading(true);
     axios
       .get(
-        `https://api.serpwow.com/live/search?api_key=5BE9A2B6F84E4F4D958FF6DA466AB6D0&engine=yahoo&q=${searchTerm}`
+        `https://api.serpwow.com/live/search?api_key=B5D2C1CB3D8F4281A12B3B1957246FBF&engine=yahoo&q=${searchTerm}`
       )
       .then(function (response) {
         setIsLoading(false);
